@@ -6,7 +6,7 @@
 /*   By: wingessoracle <wingessoracle@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/21 12:18:52 by wingessorac   #+#    #+#                 */
-/*   Updated: 2023/07/06 12:40:58 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/09/07 10:40:28 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,4 @@ class Zombie {
 
 	private:
 		std::string	name;
-	
 };

@@ -6,7 +6,7 @@
 /*   By: carlowesseling <carlowesseling@student.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/06 09:51:30 by carlowessel   #+#    #+#                 */
-/*   Updated: 2023/07/10 20:30:25 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/09/07 10:45:55 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	replace(char *fileName, char *find, char *replaceWith) {
 	
-	std::string::size_type 	pos = 0;
+	std::string::size_type 	pos = 			0;
 	std::string				buffer;
 	std::string 			newFileName = 	std::string(fileName) + ".replace";
 	std::string 			s1 = 			std::string(find);

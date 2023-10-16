@@ -6,7 +6,7 @@
 /*   By: wingessoracle <wingessoracle@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/21 09:20:06 by wingessorac   #+#    #+#                 */
-/*   Updated: 2023/07/06 09:22:07 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/10/13 16:35:28 by cwesseli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ bool check_empty_fields(std::string info[6]) {
 	}
 	return (false);
 }
-
 
 int main() {
 	
@@ -40,19 +39,45 @@ int main() {
 		std::cout << "\tWhat would you like to do?\n\n" << std::endl;
 		std::getline(std::cin, input);
 		
+		if (std::cin.eof()) {
+			std::cout << "\tEOF encountered. Exiting program\n\n" << std::endl;
+			break;
+		}
+		
 		if (input == "ADD" || input == "add") {
 			std::cout << YELLOW << "\n================= ADDING A NEW CONTACT ==========================\n" << RESET << std::endl;
 			i = 0;
+			
 			std::cout << "\nEnter a first name: " <<std::endl;
-			std::getline(std::cin, info[i++]);
+			if (!std::getline(std::cin, info[i++])){
+				std::cout << "\tEOF encountered. Exiting program\n\n" << std::endl;
+				break;
+			}
+			
 			std::cout << "\nEnter a last name: " <<std::endl;
-			std::getline(std::cin, info[i++]);
+			if(!std::getline(std::cin, info[i++])) {
+				std::cout << "\tEOF encountered. Exiting program\n\n" << std::endl;
+				break;
+			}
+
 			std::cout << "\nEnter a nickname: " <<std::endl;
-			std::getline(std::cin, info[i++]);
+			if(!std::getline(std::cin, info[i++])) {
+				std::cout << "\tEOF encountered. Exiting program\n\n" << std::endl;
+				break;
+			}
+
 			std::cout << "\nEnter a phone number: " <<std::endl;
-			std::getline(std::cin, info[i++]);
+			if(!std::getline(std::cin, info[i++])) {
+				std::cout << "\tEOF encountered. Exiting program\n\n" << std::endl;
+				break;
+			}
+
 			std::cout << "\nWhat this persons darkest secret?" <<std::endl;
-			std::getline(std::cin, info[i++]);
+			if(!std::getline(std::cin, info[i++])) {
+				std::cout << "\tEOF encountered. Exiting program\n\n" << std::endl;
+				break;
+			}
+
 			if (!check_empty_fields(info)) {
 				info[i] = '\0';
 				phonebook.addContact(info);

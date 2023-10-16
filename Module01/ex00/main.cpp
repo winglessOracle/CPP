@@ -6,7 +6,7 @@
 /*   By: carlowesseling <carlowesseling@student.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/06 09:51:30 by carlowessel   #+#    #+#                 */
-/*   Updated: 2023/07/10 20:04:45 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/09/07 10:37:07 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main() {
 
 	std::cout << CYAN << "\nmanually removing the new zombie with destructor:" << RESET << std::endl;
 	delete(number3);
-
 
 	std::cout << CYAN << "\nend of programm: destructors called on first two zombies:" << RESET << std::endl;
 }

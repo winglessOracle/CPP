@@ -6,7 +6,7 @@
 /*   By: carlowesseling <carlowesseling@student.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/06 12:36:29 by carlowessel   #+#    #+#                 */
-/*   Updated: 2023/07/09 14:39:49 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/09/07 10:42:49 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class HumanA {
 
 	public:
-
 		HumanA(std::string name, Weapon &someWeapon);
 		~HumanA();
 

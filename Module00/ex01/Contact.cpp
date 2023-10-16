@@ -6,7 +6,7 @@
 /*   By: wingessoracle <wingessoracle@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/21 12:18:52 by wingessorac   #+#    #+#                 */
-/*   Updated: 2023/07/08 12:25:42 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/09/07 10:24:19 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ std::string		Contact::getSecret() {
 std::string		Contact::getNumber() {
 	return this->number;
 }
-
 
 
 // mutators (acces and change something. usually void with parameters)

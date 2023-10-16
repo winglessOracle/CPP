@@ -6,7 +6,7 @@
 /*   By: carlowesseling <carlowesseling@student.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/06 12:35:35 by carlowessel   #+#    #+#                 */
-/*   Updated: 2023/07/10 14:17:16 by cwesseli      ########   odam.nl         */
+/*   Updated: 2023/09/07 10:48:03 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,3 @@ class Harl {
 		void	warning(void);
 		void	error(void);
 };
-
-								 

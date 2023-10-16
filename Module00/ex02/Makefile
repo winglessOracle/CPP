@@ -6,16 +6,14 @@
 #    By: wingessoracle <wingessoracle@student.co      +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/06/21 08:27:49 by wingessorac   #+#    #+#                  #
-#    Updated: 2023/07/06 11:08:15 by carlowessel   ########   odam.nl          #
+#    Updated: 2023/10/16 15:06:57 by cwesseli      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-#//= Colors =//#
 GREEN	:=	\033[32;1m
 BLUE	:=	\033[34;1m
 RESET	:=	\033[0m
 
-#//= Variables = //#
 CXX		 	?=	clang++
 CFLAGS	 	=	-Wall -Wextra -Werror -std=c++98
 OBJ_FILES	= Account.o tests.o
@@ -38,7 +36,6 @@ clean:
 fclean: clean
 	@echo -e "$(BLUE)Removing $(TARGET)$(RESET)"
 	@rm -f $(TARGET)
-
 
 re: fclean all
 

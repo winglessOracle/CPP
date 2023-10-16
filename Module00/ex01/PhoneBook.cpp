@@ -6,7 +6,7 @@
 /*   By: wingessoracle <wingessoracle@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/21 12:18:52 by wingessorac   #+#    #+#                 */
-/*   Updated: 2023/07/08 12:58:38 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/10/13 16:28:16 by cwesseli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,20 +79,27 @@ void	PhoneBook::displayPhoneBook() {
 
 void	PhoneBook::selectContact() {
 
-	char input;
+	std::string input;
 	int num = 0;
 	
 	while (true) {
 		std::cout << "\tWHICH CONTACT WOULD YOU LIKE TO SELECT?" << std::endl;
 		std::cout << "\tENTER AN INDEX NUMBER\n"<< std::endl;
+
+		if (std::cin.eof()) {
+			std::cout << "\tEOF encountered. Exiting program\n\n" << std::endl;
+			break;
+		}
 		
 		if (std::cin >> input) {
-			if (std::isdigit(input)) {
-				num = input - '0';
-				if (num >= 1 && num <= this->size)
+			try { 
+				num = std::stoi(input);
+				if (num && num >= 1 && num <= this->size)
 					break;
-			}
+				}
+			catch (...) { num = 0; }
 		}
+		std::cin.clear();
 		std::cin.ignore();
 		std::cout << CYAN << "\n==== You did not enter a valid index number ====\n================ Try again =====================\n" << RESET << std::endl;
 	}

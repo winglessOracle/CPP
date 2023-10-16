@@ -6,7 +6,7 @@
 /*   By: wingessoracle <wingessoracle@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/21 12:18:52 by wingessorac   #+#    #+#                 */
-/*   Updated: 2023/07/08 12:24:48 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/09/07 10:23:01 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ class Contact {
 		std::string		getNumber();
 		std::string		getSecret();
 
-		void	setIndex(int size);
-		void	setContact(std::string info[5]);
+		void			setIndex(int size);
+		void			setContact(std::string info[5]);
 		
-		private: // where variables go
+	private: // where variables go
 		int				index;
 		std::string		firstName;
 		std::string		lastName;

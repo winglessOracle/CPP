@@ -6,7 +6,7 @@
 /*   By: carlowesseling <carlowesseling@student.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/06 12:35:51 by carlowessel   #+#    #+#                 */
-/*   Updated: 2023/07/10 20:18:21 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/09/07 10:43:38 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ Weapon::Weapon(){}
 Weapon::Weapon(std::string typeName) : type(typeName) {}
 
 Weapon::~Weapon(){}
-
 
 //getter
 const std::string Weapon::getType(void) {

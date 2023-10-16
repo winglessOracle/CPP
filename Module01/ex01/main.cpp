@@ -6,7 +6,7 @@
 /*   By: carlowesseling <carlowesseling@student.      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/06 09:51:30 by carlowessel   #+#    #+#                 */
-/*   Updated: 2023/07/10 20:08:12 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/07/21 14:14:51 by cwesseli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,4 @@ int	main() {
 	else
 		std::cout << "\nSorry, that won't work\nNext time enter a value between 2 and 100" << std::endl;
 }
+

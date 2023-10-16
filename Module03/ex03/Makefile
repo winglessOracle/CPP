@@ -1,4 +1,4 @@
-# **************************************************************************** #
+**************************************************************************** #
 #                                                                              #
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
@@ -10,36 +10,36 @@
 #                                                                              #
 # **************************************************************************** #
 
-#//= Colors =//#
+#= Colors =#
 GREEN	:=	\033[32;1m
 BLUE	:=	\033[34;1m
 RESET	:=	\033[0m
 
-#//= Variables = //#
+#= Variables = #
 TARGET	 	?=	diamond
 CXX		 	?=	c++
 CFLAGS	 	?=	-Wall -Wextra -Werror -std=c++98
 LDFLAGS	 	?=	$(CFLAGS)
 
-#//= Locations =//#
+#= Locations =#
 INCLUDE		=	./include
 HEADERS		=	-I $(INCLUDE)
 OBJ_FILES	=	$(addprefix obj/, main.o ClapTrap.o ScavTrap.o FragTrap.o DiamondTrap.o)
 
 all: $(TARGET)
 
-#//= Linking =//#
+#= Linking =#
 $(TARGET): $(OBJ_FILES)
 	@echo -e "$(GREEN)Linking $(TARGET)$(RESET)"
 	@$(CXX) $(LDLAGS) -o $@ $^
 
-#//= Compiling =//#
+#= Compiling =#
 $(OBJ_FILES): obj/%.o: src/%.cpp
 	@mkdir -p $(dir $@)
 	@echo -e "$(GREEN)Compiling $@ $(RESET) $(notdir $<)"
 	@$(CXX) $(CFLAGS) $(HEADERS) -c -o $@ $<
 	
-#//= Cleaning =//#
+#= Cleaning =#
 clean:
 	@echo -e "$(BLUE)Remoning OBJ files$(RESET)"
 	@rm -rf obj/

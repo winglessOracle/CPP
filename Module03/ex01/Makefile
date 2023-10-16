@@ -1,4 +1,4 @@
-# **************************************************************************** #
+**************************************************************************** #
 #                                                                              #
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
@@ -10,12 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
-#//= Colors =//#
+#= Colors =#
 GREEN	:=	\033[32;1m
 BLUE	:=	\033[34;1m
 RESET	:=	\033[0m
 
-#//= Variables = //#
+#= Variables = #
 CXX		 	?=	c++
 CFLAGS	 	=	-Wall -Wextra -Werror -std=c++98
 
@@ -26,17 +26,17 @@ OBJ_FILES	=	main.o ClapTrap.o ScavTrap.o
 
 all: $(TARGET)
 
-#//= Linking =//#
+#= Linking =#
 $(TARGET): $(OBJ_FILES)
 	@echo -e "$(GREEN)Linking $(TARGET)$(RESET)"
 	@$(CXX) $(CFLAGS) -o $@ $^
 
-#//= Compiling =//#
+#= Compiling =#
 $(OBJ_FILES): %.o: %.cpp
 	@echo -e "$(GREEN)Compiling $@ $(RESET)"
 	@$(CXX) $(CFLAGS) $(HEADERS) -c $< -o $@
 	
-#//= Cleaning =//#
+#= Cleaning =#
 clean:
 	@echo -e "$(BLUE)Remoning OBJ files$(RESET)"
 	@rm -f $(OBJ_FILES)

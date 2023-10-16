@@ -6,7 +6,7 @@
 /*   By: wingessoracle <wingessoracle@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/21 09:20:06 by wingessorac   #+#    #+#                 */
-/*   Updated: 2023/07/08 13:00:41 by carlowessel   ########   odam.nl         */
+/*   Updated: 2023/09/07 10:21:59 by carlowessel   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ class Megaphone {
 			}
 		}
 };
-
 
 int main(int argc, char **argv) {
 	Megaphone megaphone;
